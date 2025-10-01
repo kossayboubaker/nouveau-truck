@@ -1,0 +1,476 @@
+/**
+ * Vision UI Responsive Styles
+ * Advanced responsive design for all screen sizes
+ */
+
+/* Mobile First Approach */
+
+/* Extra Small Devices (phones, 320px and up) */
+@media (max-width: 575.98px) {
+  /* Remove scrolls and optimize space */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Vision cards for mobile */
+  .vision-card {
+    border-radius: 16px !important;
+    margin: 8px 0 !important;
+    padding: 16px !important;
+  }
+  
+  .vision-glass {
+    border-radius: 16px !important;
+    padding: 16px !important;
+    margin: 8px 0 !important;
+  }
+  
+  /* Compact buttons */
+  .vision-button-primary,
+  .vision-button-secondary {
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+    font-size: 0.875rem !important;
+  }
+  
+  /* Mobile input adjustments */
+  .vision-input {
+    border-radius: 8px !important;
+  }
+  
+  .vision-input .MuiOutlinedInput-root input {
+    padding: 12px 14px !important;
+    font-size: 0.875rem !important;
+  }
+  
+  /* Table responsive behavior */
+  .vision-table {
+    border-radius: 12px !important;
+    overflow-x: auto !important;
+  }
+  
+  .vision-table thead th {
+    padding: 12px 16px !important;
+    font-size: 0.75rem !important;
+    min-width: 120px;
+  }
+  
+  .vision-table tbody td {
+    padding: 12px 16px !important;
+    font-size: 0.75rem !important;
+    min-width: 120px;
+    white-space: nowrap;
+  }
+  
+  /* Mobile dashboard adjustments */
+  .mobile-dashboard-card {
+    margin-bottom: 16px !important;
+  }
+  
+  .mobile-stat-card {
+    padding: 16px !important;
+    text-align: center !important;
+  }
+  
+  /* Typography mobile scaling */
+  h1, .h1 { font-size: 2rem !important; }
+  h2, .h2 { font-size: 1.75rem !important; }
+  h3, .h3 { font-size: 1.5rem !important; }
+  h4, .h4 { font-size: 1.25rem !important; }
+  h5, .h5 { font-size: 1.125rem !important; }
+  h6, .h6 { font-size: 1rem !important; }
+  
+  /* Mobile navigation */
+  .mobile-nav-item {
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    margin: 4px 8px !important;
+  }
+  
+  /* Hide desktop-only elements */
+  .desktop-only {
+    display: none !important;
+  }
+  
+  /* Show mobile-only elements */
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+/* Small Devices (landscape phones, tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .vision-card {
+    border-radius: 18px !important;
+    padding: 20px !important;
+  }
+  
+  .vision-glass {
+    border-radius: 18px !important;
+    padding: 20px !important;
+  }
+  
+  /* Table improvements for small tablets */
+  .vision-table thead th {
+    padding: 14px 18px !important;
+    font-size: 0.8125rem !important;
+  }
+  
+  .vision-table tbody td {
+    padding: 14px 18px !important;
+    font-size: 0.8125rem !important;
+  }
+  
+  /* Grid adjustments */
+  .tablet-grid-item {
+    padding: 8px !important;
+  }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Tablet optimizations */
+  .vision-sidebar {
+    width: 240px !important;
+  }
+  
+  .vision-content-tablet {
+    margin-left: 240px !important;
+    padding: 20px !important;
+  }
+  
+  /* Dashboard cards for tablets */
+  .tablet-dashboard-card {
+    margin-bottom: 20px !important;
+  }
+  
+  /* Chart responsiveness */
+  .vision-chart-container {
+    padding: 20px !important;
+    border-radius: 16px !important;
+  }
+  
+  /* Form improvements */
+  .tablet-form-section {
+    padding: 24px !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Desktop small optimizations */
+  .vision-sidebar {
+    width: 260px !important;
+  }
+  
+  .desktop-content {
+    margin-left: 260px !important;
+    padding: 24px !important;
+  }
+  
+  /* Enhanced cards for desktop */
+  .desktop-dashboard-card {
+    margin-bottom: 24px !important;
+    transition: transform 0.3s ease !important;
+  }
+  
+  .desktop-dashboard-card:hover {
+    transform: translateY(-2px) !important;
+  }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Full desktop experience */
+  .vision-sidebar {
+    width: 274px !important;
+  }
+  
+  .xl-content {
+    margin-left: 274px !important;
+    padding: 32px !important;
+  }
+  
+  /* Enhanced animations for large screens */
+  .xl-animation-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+  
+  .xl-animation-card:hover {
+    transform: translateY(-4px) scale(1.02) !important;
+  }
+}
+
+/* Ultra Wide Screens (1400px and up) */
+@media (min-width: 1400px) {
+  /* Ultra wide optimizations */
+  .ultra-wide-container {
+    max-width: 1320px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Larger cards for ultra wide */
+  .ultra-wide-card {
+    padding: 40px !important;
+    border-radius: 24px !important;
+  }
+  
+  /* Enhanced typography for large screens */
+  .ultra-wide-title {
+    font-size: 3.5rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* Height-based responsiveness */
+@media (max-height: 600px) {
+  /* Short screens optimization */
+  .short-screen-nav {
+    padding: 8px 0 !important;
+  }
+  
+  .short-screen-content {
+    padding: 16px !important;
+  }
+  
+  .vision-card {
+    margin: 4px 0 !important;
+    padding: 16px !important;
+  }
+}
+
+@media (min-height: 900px) {
+  /* Tall screens optimization */
+  .tall-screen-spacing {
+    margin: 32px 0 !important;
+  }
+  
+  .tall-screen-padding {
+    padding: 40px !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  /* Print optimizations */
+  .vision-glass,
+  .vision-card {
+    background: white !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  
+  .vision-sidebar,
+  .vision-navbar,
+  .vision-footer {
+    display: none !important;
+  }
+  
+  .print-content {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Print table styles */
+  .vision-table {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .vision-table thead th {
+    background: #f5f5f5 !important;
+    color: black !important;
+  }
+  
+  .vision-table tbody tr {
+    border-bottom: 1px solid #ddd !important;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 767px) and (orientation: landscape) {
+  /* Landscape mobile optimizations */
+  .landscape-mobile-nav {
+    height: 60px !important;
+    padding: 8px 16px !important;
+  }
+  
+  .landscape-mobile-content {
+    padding: 16px !important;
+    margin-top: 60px !important;
+  }
+  
+  .landscape-mobile-card {
+    padding: 16px !important;
+    margin: 8px 0 !important;
+  }
+}
+
+/* Portrait tablet orientation */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /* Portrait tablet optimizations */
+  .portrait-tablet-sidebar {
+    width: 200px !important;
+  }
+  
+  .portrait-tablet-content {
+    margin-left: 200px !important;
+    padding: 20px !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable animations for users who prefer reduced motion */
+  .vision-card,
+  .vision-button-primary,
+  .vision-button-secondary,
+  .vision-glass,
+  .vision-animate-pulse,
+  .vision-animate-glow,
+  .vision-animate-slide-in {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .vision-card:hover,
+  .vision-button-primary:hover,
+  .vision-button-secondary:hover {
+    transform: none !important;
+  }
+}
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+  /* High contrast mode adjustments */
+  .vision-card,
+  .vision-glass {
+    border: 2px solid #ffffff !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+  }
+  
+  .vision-button-primary {
+    border: 2px solid #ffffff !important;
+    background: #000000 !important;
+    color: #ffffff !important;
+  }
+  
+  .vision-input {
+    border: 2px solid #ffffff !important;
+    background: #000000 !important;
+  }
+}
+
+/* Dark Mode Responsive Adjustments */
+@media (prefers-color-scheme: dark) {
+  /* Automatic dark mode support */
+  .auto-dark-card {
+    background: rgba(15, 20, 25, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .auto-dark-text {
+    color: #A0AEC0 !important;
+  }
+}
+
+/* Focus and Accessibility Improvements */
+.vision-card:focus-within,
+.vision-button-primary:focus,
+.vision-button-secondary:focus,
+.vision-input:focus-within {
+  outline: 2px solid #00D4FF !important;
+  outline-offset: 2px !important;
+}
+
+/* Loading States Responsive */
+.vision-loading-mobile {
+  height: 60px !important;
+  border-radius: 8px !important;
+}
+
+.vision-loading-desktop {
+  height: 80px !important;
+  border-radius: 12px !important;
+}
+
+/* Utility Classes for Responsive Design */
+.hide-on-mobile {
+  display: block !important;
+}
+
+.show-on-mobile {
+  display: none !important;
+}
+
+@media (max-width: 767.98px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  
+  .show-on-mobile {
+    display: block !important;
+  }
+}
+
+.hide-on-tablet {
+  display: block !important;
+}
+
+.show-on-tablet {
+  display: none !important;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .hide-on-tablet {
+    display: none !important;
+  }
+  
+  .show-on-tablet {
+    display: block !important;
+  }
+}
+
+/* Flex utilities responsive */
+.flex-mobile-column {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+@media (min-width: 768px) {
+  .flex-mobile-column {
+    flex-direction: row !important;
+  }
+}
+
+/* Gap utilities responsive */
+.gap-mobile-small {
+  gap: 8px !important;
+}
+
+.gap-tablet-medium {
+  gap: 16px !important;
+}
+
+.gap-desktop-large {
+  gap: 24px !important;
+}
+
+@media (min-width: 768px) {
+  .gap-mobile-small {
+    gap: 16px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gap-tablet-medium {
+    gap: 24px !important;
+  }
+  
+  .gap-desktop-large {
+    gap: 32px !important;
+  }
+}

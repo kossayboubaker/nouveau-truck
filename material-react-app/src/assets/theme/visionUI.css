@@ -1,0 +1,400 @@
+/**
+ * Vision UI Global Styles
+ * Modern glassmorphism theme for fleet management dashboard
+ */
+
+:root {
+  /* Core Colors (basé sur la capture Vision UI) */
+  --vision-bg-primary: #0B0E27;                    /* Bleu très foncé principal */
+  --vision-bg-secondary: #151B3D;                  /* Bleu foncé pour les cartes */
+  --vision-bg-tertiary: #1E2A78;                   /* Bleu moyen */
+  --vision-bg-glass: rgba(21, 27, 61, 0.85);       /* Effet verre bleuté */
+
+  /* Text Colors */
+  --vision-text-primary: #FFFFFF;
+  --vision-text-secondary: #B8C2DB;                /* Bleu clair pour texte secondaire */
+  --vision-text-tertiary: #8B95B8;                 /* Bleu moyen pour texte tertiaire */
+  --vision-text-disabled: #4A5568;
+
+  /* Brand Colors */
+  --vision-brand-primary: #151B3D;                 /* Bleu principal des cartes */
+  --vision-brand-secondary: #00D4FF;               /* Cyan principal */
+  --vision-accent-cyan: #00D4FF;                   /* Cyan néon */
+  --vision-accent-teal: #00E5CC;                   /* Turquoise pour accents */
+
+  /* Gradients (basé sur la capture) */
+  --vision-gradient-primary: linear-gradient(135deg, #151B3D 0%, #1E2A78 50%, #4D9AFF 100%);
+  --vision-gradient-secondary: linear-gradient(135deg, #00D4FF 0%, #00E5CC 100%);
+  --vision-gradient-glass: linear-gradient(135deg, rgba(184, 194, 219, 0.15) 0%, rgba(184, 194, 219, 0.05) 100%);
+
+  /* Shadows (plus intenses pour correspondre à la capture) */
+  --vision-shadow-glass: 0 12px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(184, 194, 219, 0.15);
+  --vision-shadow-glow-primary: 0 0 35px rgba(0, 212, 255, 0.6);
+  --vision-shadow-glow-accent: 0 0 40px rgba(0, 212, 255, 0.7);
+
+  /* Borders */
+  --vision-border-primary: rgba(184, 194, 219, 0.12);
+  --vision-border-secondary: rgba(184, 194, 219, 0.06);
+  --vision-border-accent: rgba(0, 212, 255, 0.25);
+}
+
+/* Global Body Styles (basé sur la capture Vision UI) */
+body {
+  background: var(--vision-bg-primary) !important;
+  background-image:
+    radial-gradient(circle at 15% 85%, rgba(0, 212, 255, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 85% 15%, rgba(77, 154, 255, 0.12) 0%, transparent 55%),
+    radial-gradient(circle at 50% 50%, rgba(30, 42, 120, 0.08) 0%, transparent 70%),
+    radial-gradient(circle at 25% 25%, rgba(0, 229, 204, 0.06) 0%, transparent 65%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Remove default MUI styles conflicts */
+#root {
+  min-height: 100vh;
+  background: transparent;
+}
+
+/* Global Glass Effect */
+.vision-glass {
+  background: var(--vision-bg-glass) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--vision-border-primary) !important;
+  border-radius: 20px !important;
+  box-shadow: var(--vision-shadow-glass) !important;
+}
+
+.vision-glass:hover {
+  border: 1px solid var(--vision-border-accent) !important;
+  transform: translateY(-2px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Card Styles */
+.vision-card {
+  background: var(--vision-bg-glass) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--vision-border-primary) !important;
+  border-radius: 20px !important;
+  box-shadow: var(--vision-shadow-glass) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--vision-gradient-primary);
+  z-index: 1;
+}
+
+.vision-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4), 
+    0 0 30px rgba(92, 45, 213, 0.4) !important;
+  border: 1px solid rgba(92, 45, 213, 0.3) !important;
+}
+
+/* Button Styles (basé sur la capture Vision UI) */
+.vision-button-primary {
+  background: linear-gradient(135deg, #00D4FF 0%, #4D9AFF 100%) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.5) !important;
+  color: #0B0E27 !important;                                    /* Texte sombre sur fond cyan */
+  font-weight: 600 !important;
+  text-transform: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-button-primary:hover {
+  background: linear-gradient(135deg, #00B8E6 0%, #0099CC 100%) !important;
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.7) !important;
+  transform: translateY(-2px) !important;
+}
+
+.vision-button-secondary {
+  background: rgba(184, 194, 219, 0.08) !important;
+  border: 1px solid var(--vision-border-accent) !important;
+  border-radius: 12px !important;
+  color: var(--vision-text-secondary) !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(15px) !important;
+}
+
+.vision-button-secondary:hover {
+  background: rgba(0, 212, 255, 0.15) !important;
+  border: 1px solid var(--vision-accent-cyan) !important;
+  color: var(--vision-accent-cyan) !important;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.4) !important;
+}
+
+/* Input Styles */
+.vision-input {
+  background: rgba(15, 20, 25, 0.5) !important;
+  border: 1px solid var(--vision-border-primary) !important;
+  border-radius: 12px !important;
+  color: var(--vision-text-primary) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.vision-input:focus,
+.vision-input:focus-within {
+  border: 1px solid var(--vision-accent-cyan) !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3) !important;
+  background: rgba(15, 20, 25, 0.7) !important;
+}
+
+.vision-input .MuiInputLabel-root {
+  color: var(--vision-text-secondary) !important;
+}
+
+.vision-input .MuiInputLabel-root.Mui-focused {
+  color: var(--vision-accent-cyan) !important;
+}
+
+/* Table Styles */
+.vision-table {
+  background: var(--vision-bg-glass) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  border: 1px solid var(--vision-border-primary) !important;
+}
+
+.vision-table thead th {
+  background: rgba(15, 20, 25, 0.8) !important;
+  color: var(--vision-text-primary) !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid var(--vision-border-primary) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  font-size: 0.875rem !important;
+}
+
+.vision-table tbody tr {
+  background: rgba(26, 32, 44, 0.4) !important;
+  border-bottom: 1px solid var(--vision-border-secondary) !important;
+  transition: all 0.2s ease !important;
+}
+
+.vision-table tbody tr:hover {
+  background: rgba(26, 32, 44, 0.6) !important;
+  transform: translateX(4px) !important;
+}
+
+.vision-table tbody td {
+  color: var(--vision-text-secondary) !important;
+  border-bottom: none !important;
+  padding: 16px !important;
+}
+
+/* Navbar Styles */
+.vision-navbar {
+  background: var(--vision-bg-glass) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid var(--vision-border-primary) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Sidebar Styles */
+.vision-sidebar {
+  background: var(--vision-bg-glass) !important;
+  backdrop-filter: blur(20px) !important;
+  border-right: 1px solid var(--vision-border-primary) !important;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.vision-sidebar .MuiListItemButton-root {
+  border-radius: 12px !important;
+  margin: 4px 8px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  color: var(--vision-text-secondary) !important;
+}
+
+.vision-sidebar .MuiListItemButton-root:hover {
+  background: rgba(0, 212, 255, 0.1) !important;
+  color: var(--vision-accent-cyan) !important;
+  transform: translateX(4px) !important;
+}
+
+.vision-sidebar .MuiListItemButton-root.Mui-selected {
+  background: var(--vision-gradient-secondary) !important;
+  color: white !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4) !important;
+}
+
+/* Chart Styles */
+.vision-chart-container {
+  background: var(--vision-bg-glass) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--vision-border-primary) !important;
+  border-radius: 20px !important;
+  padding: 24px !important;
+  box-shadow: var(--vision-shadow-glass) !important;
+}
+
+/* Status Indicators */
+.vision-status-active {
+  color: var(--vision-accent-green) !important;
+  background: rgba(1, 181, 116, 0.1) !important;
+  border: 1px solid rgba(1, 181, 116, 0.3) !important;
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.vision-status-inactive {
+  color: var(--vision-text-tertiary) !important;
+  background: rgba(113, 128, 150, 0.1) !important;
+  border: 1px solid rgba(113, 128, 150, 0.3) !important;
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.vision-status-warning {
+  color: #FFB547 !important;
+  background: rgba(255, 181, 71, 0.1) !important;
+  border: 1px solid rgba(255, 181, 71, 0.3) !important;
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Animations */
+@keyframes visionPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes visionGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
+  }
+}
+
+@keyframes visionSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vision-animate-pulse {
+  animation: visionPulse 2s infinite;
+}
+
+.vision-animate-glow {
+  animation: visionGlow 3s infinite;
+}
+
+.vision-animate-slide-in {
+  animation: visionSlideIn 0.6s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vision-card {
+    border-radius: 16px !important;
+    margin: 8px !important;
+  }
+  
+  .vision-glass {
+    border-radius: 16px !important;
+  }
+  
+  .vision-button-primary,
+  .vision-button-secondary {
+    border-radius: 10px !important;
+  }
+  
+  .vision-input {
+    border-radius: 10px !important;
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 32, 44, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vision-gradient-secondary);
+  border-radius: 10px;
+  border: 2px solid rgba(26, 32, 44, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vision-gradient-primary);
+}
+
+/* Loading States */
+.vision-loading {
+  background: linear-gradient(90deg, 
+    rgba(26, 32, 44, 0.4) 25%, 
+    rgba(45, 55, 72, 0.6) 50%, 
+    rgba(26, 32, 44, 0.4) 75%
+  );
+  background-size: 200% 100%;
+  animation: visionShimmer 2s infinite;
+}
+
+@keyframes visionShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .vision-glass,
+  .vision-card {
+    background: white !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+}

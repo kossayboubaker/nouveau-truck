@@ -1,0 +1,306 @@
+/**
+ * Vision UI Global Color Overrides
+ * Force all components to use the new Vision UI color scheme
+ */
+
+/* Override all existing color references */
+.MuiCard-root {
+  background: rgba(21, 27, 61, 0.85) !important;
+  border: 1px solid rgba(184, 194, 219, 0.12) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.MuiPaper-root {
+  background: rgba(21, 27, 61, 0.85) !important;
+  border: 1px solid rgba(184, 194, 219, 0.12) !important;
+}
+
+/* Override text colors */
+.MuiTypography-root {
+  color: #FFFFFF !important;
+}
+
+.MuiTypography-body2 {
+  color: #B8C2DB !important;
+}
+
+.MuiTypography-caption {
+  color: #8B95B8 !important;
+}
+
+/* Override button colors */
+.MuiButton-containedPrimary {
+  background: linear-gradient(135deg, #00D4FF 0%, #4D9AFF 100%) !important;
+  color: #0B0E27 !important;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.5) !important;
+}
+
+.MuiButton-containedPrimary:hover {
+  background: linear-gradient(135deg, #00B8E6 0%, #0099CC 100%) !important;
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.7) !important;
+}
+
+.MuiButton-outlinedPrimary {
+  border: 1px solid rgba(0, 212, 255, 0.3) !important;
+  color: #00D4FF !important;
+  background: rgba(184, 194, 219, 0.05) !important;
+}
+
+.MuiButton-outlinedPrimary:hover {
+  background: rgba(0, 212, 255, 0.15) !important;
+  border: 1px solid #00D4FF !important;
+}
+
+/* Override input colors */
+.MuiOutlinedInput-root {
+  background: rgba(11, 14, 39, 0.6) !important;
+  border: 1px solid rgba(184, 194, 219, 0.15) !important;
+  color: #FFFFFF !important;
+}
+
+.MuiOutlinedInput-root:hover {
+  border: 1px solid rgba(184, 194, 219, 0.25) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused {
+  border: 1px solid #00D4FF !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4) !important;
+}
+
+.MuiInputLabel-root {
+  color: #B8C2DB !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: #00D4FF !important;
+}
+
+/* Override table colors */
+.MuiTableHead-root {
+  background: rgba(11, 14, 39, 0.8) !important;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  background: rgba(11, 14, 39, 0.8) !important;
+  color: #FFFFFF !important;
+  border-bottom: 1px solid rgba(184, 194, 219, 0.15) !important;
+}
+
+.MuiTableBody-root .MuiTableRow-root {
+  background: rgba(21, 27, 61, 0.4) !important;
+  border-bottom: 1px solid rgba(184, 194, 219, 0.1) !important;
+}
+
+.MuiTableBody-root .MuiTableRow-root:hover {
+  background: rgba(21, 27, 61, 0.7) !important;
+}
+
+.MuiTableCell-root {
+  color: #B8C2DB !important;
+  border-bottom: 1px solid rgba(184, 194, 219, 0.1) !important;
+}
+
+/* Override chip colors */
+.MuiChip-root {
+  background: rgba(21, 27, 61, 0.6) !important;
+  color: #B8C2DB !important;
+  border: 1px solid rgba(184, 194, 219, 0.2) !important;
+}
+
+.MuiChip-colorPrimary {
+  background: rgba(0, 212, 255, 0.2) !important;
+  color: #00D4FF !important;
+  border: 1px solid rgba(0, 212, 255, 0.4) !important;
+}
+
+.MuiChip-colorSecondary {
+  background: rgba(77, 154, 255, 0.2) !important;
+  color: #4D9AFF !important;
+  border: 1px solid rgba(77, 154, 255, 0.4) !important;
+}
+
+/* Override menu colors */
+.MuiMenu-paper {
+  background: rgba(21, 27, 61, 0.95) !important;
+  border: 1px solid rgba(184, 194, 219, 0.15) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.MuiMenuItem-root {
+  color: #B8C2DB !important;
+}
+
+.MuiMenuItem-root:hover {
+  background: rgba(0, 212, 255, 0.1) !important;
+  color: #00D4FF !important;
+}
+
+/* Override drawer colors */
+.MuiDrawer-paper {
+  background: rgba(21, 27, 61, 0.95) !important;
+  border-right: 1px solid rgba(184, 194, 219, 0.12) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* Override app bar colors */
+.MuiAppBar-root {
+  background: rgba(21, 27, 61, 0.85) !important;
+  border-bottom: 1px solid rgba(184, 194, 219, 0.12) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* Override list item colors */
+.MuiListItemButton-root {
+  color: #B8C2DB !important;
+  border-radius: 12px !important;
+  margin: 4px 8px !important;
+}
+
+.MuiListItemButton-root:hover {
+  background: rgba(0, 212, 255, 0.1) !important;
+  color: #00D4FF !important;
+}
+
+.MuiListItemButton-root.Mui-selected {
+  background: linear-gradient(135deg, #00D4FF 0%, #00E5CC 100%) !important;
+  color: #0B0E27 !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4) !important;
+}
+
+.MuiListItemIcon-root {
+  color: inherit !important;
+}
+
+.MuiListItemText-root .MuiTypography-root {
+  color: inherit !important;
+}
+
+/* Override progress colors */
+.MuiLinearProgress-root {
+  background: rgba(184, 194, 219, 0.1) !important;
+}
+
+.MuiLinearProgress-bar {
+  background: linear-gradient(135deg, #00D4FF 0%, #00E5CC 100%) !important;
+}
+
+.MuiCircularProgress-root {
+  color: #00D4FF !important;
+}
+
+/* Override badge colors */
+.MuiBadge-badge {
+  background: linear-gradient(135deg, #00D4FF 0%, #00E5CC 100%) !important;
+  color: #0B0E27 !important;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.4) !important;
+}
+
+/* Override divider colors */
+.MuiDivider-root {
+  background: rgba(184, 194, 219, 0.12) !important;
+}
+
+/* Override icon button colors */
+.MuiIconButton-root {
+  color: #B8C2DB !important;
+  border-radius: 12px !important;
+}
+
+.MuiIconButton-root:hover {
+  background: rgba(0, 212, 255, 0.1) !important;
+  color: #00D4FF !important;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3) !important;
+}
+
+/* Override switch colors */
+.MuiSwitch-switchBase.Mui-checked {
+  color: #00D4FF !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background: rgba(0, 212, 255, 0.5) !important;
+}
+
+/* Override checkbox colors */
+.MuiCheckbox-root.Mui-checked {
+  color: #00D4FF !important;
+}
+
+/* Override radio colors */
+.MuiRadio-root.Mui-checked {
+  color: #00D4FF !important;
+}
+
+/* Override accordion colors */
+.MuiAccordion-root {
+  background: rgba(21, 27, 61, 0.85) !important;
+  border: 1px solid rgba(184, 194, 219, 0.12) !important;
+}
+
+.MuiAccordionSummary-root {
+  background: rgba(11, 14, 39, 0.6) !important;
+}
+
+/* Override tabs colors */
+.MuiTab-root {
+  color: #B8C2DB !important;
+}
+
+.MuiTab-root.Mui-selected {
+  color: #00D4FF !important;
+}
+
+.MuiTabs-indicator {
+  background: linear-gradient(135deg, #00D4FF 0%, #00E5CC 100%) !important;
+  height: 3px !important;
+  border-radius: 2px !important;
+}
+
+/* Override scrollbar for consistency */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(21, 27, 61, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00D4FF 0%, #00E5CC 100%);
+  border-radius: 10px;
+  border: 2px solid rgba(21, 27, 61, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00B8E6 0%, #00C4B3 100%);
+}
+
+/* Special overrides for charts and graphs */
+.recharts-text {
+  fill: #B8C2DB !important;
+}
+
+.recharts-cartesian-axis-line,
+.recharts-cartesian-axis-tick-line {
+  stroke: rgba(184, 194, 219, 0.2) !important;
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(184, 194, 219, 0.1) !important;
+}
+
+/* Chart.js overrides */
+.chartjs-tooltip {
+  background: rgba(21, 27, 61, 0.95) !important;
+  border: 1px solid rgba(184, 194, 219, 0.2) !important;
+  color: #FFFFFF !important;
+}
+
+/* Custom scrollbar for specific containers */
+.vision-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #00D4FF rgba(21, 27, 61, 0.3);
+}
